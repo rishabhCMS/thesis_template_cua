@@ -1,12 +1,18 @@
-% Turabian Formatting for Theses and Dissertations, 2018/08/06
-%
+% The Catholic University of America PhD Thesis Template (2021/03/23)
+% Based of the Turabian Formatting for Theses and Dissertations
+
+% This is a thesis template for The Catholic University of America.
+
 % Developed using the turabian-formatting package (2018/08/01), available through CTAN: http://www.ctan.org/pkg/turabian-formatting
-%
+
 % Additional document class formatting options:
-%
+
 % raggedright: ragged right formatting without hyphenations
 % authordate: support for the author-date citation style
 % endnotes: support for endnotes
+
+
+% Adapted by Luiz F. G. dos Santos (2021/03/23)
 
 \documentclass[12pt]{turabian-thesis}
 
@@ -33,12 +39,7 @@
 \newcommand\hmmax{0}
 \newcommand\bmmax{0}
 \usepackage{bm}
-
-\def\zz#1{%
-\ifdim#1pt>89pt\cellcolor{green}\else
-\ifdim#1pt>79pt\cellcolor{yellow}\else
-\cellcolor{red}\fi\fi
-#1}
+\usepackage{ragged2e}
 
 % Information for title page
 \title{[TITLE OF THE THESIS]}
@@ -46,6 +47,7 @@
 %\subtitle{A Template based on Turabian's \emph{A Manual for Writers}, 9th edition}
 \author{[AUTHOR'S NAME]}
 
+%FILL OUT YOUR CORRECT INFORMATION HERE!!!
 \authorinfo{M.Sc., The Catholic University of America, [year]}
 \department{Department of Physics}
 \school{School of Arts and Science}
@@ -65,9 +67,10 @@
 \frontmatter
 \maketitle
 \include{frontmatter/1abstract}
-\PrintCommitteeInfoPage{[AUTHOR'S NAME]}{[FIRST COMMITTEE MEMBER]}{[SECOND COMMITTEE MEMBER]}{[THIRD COMMITTEE MEMBER]}{[FORTH COMMITTEE MEMBER]}{[Month of Defense]}
-\include{frontmatter/4dedication}
-\include{frontmatter/5acknowledgment}
+\PrintCommitteeInfoPage{[AUTHOR'S NAME]}{[FIRST COMMITTEE MEMBER]}{[SECOND COMMITTEE MEMBER]}{[THIRD COMMITTEE MEMBER]}{[FORTH COMMITTEE MEMBER]}
+\include{frontmatter/2dedication}
+\include{frontmatter/3extra}
+\include{frontmatter/4acknowledgment}
 \tableofcontents 
 \listoffigures
 \listoftables
@@ -82,7 +85,7 @@
 
 \backmatter
 
-\bibliographystyle{aa}
+\bibliographystyle{bibliography}
 \bibliography{backmatter/refferences}
 
     \begin{appendixes}
